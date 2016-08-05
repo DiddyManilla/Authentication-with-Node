@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Accounts Signin</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.js"></script>
+	<style>input[type="text"] {border: 1px solid gray;}</style>
+</head>
+<body>
+	<h1 class="centered">Signin</h1>
+	<div class="centered">
+		<label for="username">Username: </label><input type="text" id="username">
+		<label for="password">Password: </label><input type="text" id="password">
+	</div>
+	<input type="button" value="Sign in" class="centered" id="signin">
+	<p class="centered"></p>
+	<script>
+		$("#signin").on('click', function(event) {
+			$.ajax("/signin", {
+				method: "POST",
+				data: {username: $("#username").val(), password: $("#password").val()},
+				success: function(response) {
+					if (response === "User found") {
+						window.location.replace("../");
+					} else {
+						$("p").text(response);
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>

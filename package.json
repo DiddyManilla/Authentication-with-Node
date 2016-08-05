@@ -1,0 +1,18 @@
+{
+  "name": "node-account-project",
+  "version": "1.0.0",
+  "description": "App that supports signing in, signing out, making accounts, and deleting accounts",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.9.8",
+	  "body-parser": "^1.15.2",
+	  "cookie-parser": "^1.4.3",
+	  "jsonwebtoken": "^7.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

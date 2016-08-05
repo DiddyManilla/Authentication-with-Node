@@ -1,0 +1,8 @@
+h1 {
+    color: red;
+}
+input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

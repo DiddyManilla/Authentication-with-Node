@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Accounts</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1 class="centered">Accounts</h1>
+	<div class="centered">
+		<% if(user) { %>
+			<a href="/signout"><input type="button" id="sign-out" value="Sign out"></a>
+			<a href="/delete"><input type="button" id="delete" value="Delete account"></a>
+			<h3>Welcome, <%= user %></h3>
+		<% } else { %>
+			<a href="/signup"><input type="button" id="sign-up" value="Sign up"></a>
+			<a href="/signin"><input type="button" id="sign-in" value="Sign in"></a>
+		<% } %>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Delete</title>
+	    <link rel="stylesheet" href="style.css">
+	    <link rel="stylesheet" href="delete.css">
+	    <script src="jquery.js"></script>
+    </head>
+    <body>
+        <h1><b>Are you sure you want to delete your account? This action cannot be undone.</b></h1>
+        <input type="button" value="Delete account" id="delete">
+        <script>
+            $("#delete").on('click', function() {
+                console.log("Delete button pushed.");
+                $.ajax('/accounts', {
+                    method:"DELETE",
+                    success: function(result) {
+                        console.log("Success!");
+                        window.location.replace('../');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
